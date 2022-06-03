@@ -3,7 +3,7 @@ function countriesCards(arr) {
     .map(
       ({ flags, name }) =>
         `<li class='countries-item'>
-          <img src="${flags.svg}" alt="${name.official}" height=20px /><p>${name.official}</p>
+          <img src="${flags.svg}" alt="${name.official}" width=30px /><p>${name.official}</p>
         </li>`
     )
     .join('');
@@ -13,7 +13,7 @@ function countryCard(arr) {
   const { flags, name, capital, population, languages } = arr[0];
   return `
   <div class='country-info-box'>
-    <img src="${flags.svg}" alt="${name.official}" height=20px /><p>${
+    <img src="${flags.svg}" alt="${name.official}" width=44px /><p>${
     name.official
   }</p>
   </div>
