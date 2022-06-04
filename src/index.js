@@ -20,13 +20,15 @@ refs.input.addEventListener(
 function onSearchCountry(e) {
   const country = e.target.value.trim();
 
+  cleareMarkup();
+
   if (!country) {
     return;
   }
 
   fetchCountries(country)
     .then(countries => {
-      cleareMarkup();
+      // cleareMarkup();
       renderCountriesCards(countries);
     })
     .catch(onFetchError);
@@ -65,6 +67,6 @@ function cleareMarkup() {
 }
 
 function onFetchError(error) {
-  cleareMarkup();
+  // cleareMarkup();
   Notify.failure('Oops, there is no country with that name');
 }
